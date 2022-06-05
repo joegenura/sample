@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>whereismywebsite.com</title>
+
+    <style>
+      *{
+        font-family: 'Lucida Sans', sans-serif;
+      }
+
+      body{
+        display: grid;
+        justify-content: center;
+        padding-top: 25vh;
+        background: black;
+        color: white;
+      }
+
+      h1{
+        text-align: center;
+      }
+
+      p{
+        text-align: center;
+        font-size: 1.2rem;
+      }
+
+      input[type=text]{
+        background: black;
+        color: white;
+        height: 3rem;
+        text-align: center;
+        font-size: 1.5rem;
+        border: 1px solid rgb(0, 195, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>here is your website</h1>
+    <p>hello there!</p>
+    <input type="text" name="name" id="name">
+
+    <script>
+      const displayText = document.querySelector("p");
+      const userInput = document.querySelector('#name');
+
+      userInput.addEventListener('keyup', function(){
+        if(userInput.value !== "" && userInput.value !== " "){
+          displayText.textContent = `hello ${userInput.value}`;
+        }else{
+          displayText.textContent = `hello there`;
+        }
+      })
+    </script>
+  </body>
+</html>
